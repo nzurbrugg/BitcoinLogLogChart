@@ -79,7 +79,7 @@ ax.set_xlim(datemin, datemax)
 ax.set_ylabel('$/BTC')
 ax.yaxis.set_major_formatter(FuncFormatter(yLogFormat))
 ymin = 0.01
-ymax = 40000
+ymax = 100000
 ax.set_ylim(ymin, ymax)
 
 ax.grid(b=True, which='major', color='0.8', linestyle='-')
@@ -87,10 +87,10 @@ ax.grid(b=True, which='minor', color='0.96', linestyle='-')
 ax.set_axisbelow(True)
 
 #halving dates
-plt.axvline(x=datestr2x('11/28/2012'), color='r', linestyle="--", label='Mining reward halving dates')
-plt.axvline(x=datestr2x('7/10/2016'), color='r', linestyle="--")
-plt.axvline(x=datestr2x('3/10/2020'), color='r', linestyle="--")
-plt.axvline(x=datestr2x('12/10/2023'), color='r', linestyle="--")
+#plt.axvline(x=datestr2x('11/28/2012'), color='r', linestyle="--", label='Mining reward halving dates')
+#plt.axvline(x=datestr2x('7/10/2016'), color='r', linestyle="--")
+#plt.axvline(x=datestr2x('3/10/2020'), color='r', linestyle="--")
+#plt.axvline(x=datestr2x('12/10/2023'), color='r', linestyle="--")
 
 #low boundary line
 plotLineFrom2Points('12/10/2010',0.19,'5/23/2016',443.77)
@@ -104,7 +104,7 @@ plotLineFrom2Points('12/10/2010',0.19,'5/23/2016',443.77)
 #plotLineFrom2Points('11/7/2010',0.36,'11/4/2015',490)
 
 #high peak line
-#plt.plot([datestr2x('6/9/2011'), datestr2x('11/29/2013'), datestr2x('4/1/2018'), 15*365], [29.58, 600, 10000, 90000], color='k', linestyle=':')
+plotLineFrom2Points('6/9/2011', 29.58, '11/29/2013', 1152)
 
 plt.legend(loc='upper left')
 
